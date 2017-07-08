@@ -1,0 +1,9 @@
+{
+  "name": "map-props-to-children",
+  "version": "1.0.0",
+  "description": "Lightweight function to inject props into child React components",
+  "main": "index.js",
+  "repository": "https://github.com/nulogy/map-props-to-children",
+  "author": "Evan Brodie <evanb@nulogy.com>",
+  "license": "MIT"
+}
