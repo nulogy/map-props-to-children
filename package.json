@@ -2,8 +2,33 @@
   "name": "map-props-to-children",
   "version": "1.0.0",
   "description": "Lightweight function to inject props into child React components",
-  "main": "index.js",
-  "repository": "https://github.com/nulogy/map-props-to-children",
   "author": "Evan Brodie <evanb@nulogy.com>",
-  "license": "MIT"
+  "files": [
+    "lib"
+  ],
+  "main": "index.js",
+  "devDependencies": {
+    "nsp": "^2.6.3",
+    "eslint": "^4.1.0",
+    "eslint-config-xo-space": "^0.16.0",
+    "jest": "^19.0.2",
+    "jest-cli": "^20.0.0"
+  },
+  "repository": "https://github.com/nulogy/map-props-to-children",
+  "license": "MIT",
+  "scripts": {
+    "prepublish": "nsp check",
+    "pretest": "eslint . --fix",
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "jest": true,
+      "node": true
+    }
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
 }
