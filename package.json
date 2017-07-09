@@ -8,11 +8,14 @@
   ],
   "main": "index.js",
   "devDependencies": {
-    "nsp": "^2.6.3",
-    "eslint": "^4.1.0",
-    "eslint-config-xo-space": "^0.16.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-plugin-import": "^2.6.1",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
     "jest": "^19.0.2",
-    "jest-cli": "^20.0.0"
+    "jest-cli": "^20.0.0",
+    "nsp": "^2.6.3"
   },
   "repository": "https://github.com/nulogy/map-props-to-children",
   "license": "MIT",
@@ -20,13 +23,6 @@
     "prepublish": "nsp check",
     "pretest": "eslint . --fix",
     "test": "jest"
-  },
-  "eslintConfig": {
-    "extends": "xo-space",
-    "env": {
-      "jest": true,
-      "node": true
-    }
   },
   "jest": {
     "testEnvironment": "node"
