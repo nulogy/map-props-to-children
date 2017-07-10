@@ -11,8 +11,5 @@
     "test": {
       "presets": ["react"]
     }
-  },
-  "ignore": [
-    "**/*.test.js*"
-  ]
+  }
 }

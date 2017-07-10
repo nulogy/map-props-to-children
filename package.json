@@ -6,35 +6,42 @@
   "files": [
     "dist"
   ],
-  "main": "dist/mapPropsToChildren.js",
+  "main": "dist/index.js",
   "peerDependencies": {
     "react": ">= 15"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-jest": "^20.0.3",
+    "babel-eslint": "^7.2.3",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "enzyme": "^2.9.1",
-    "eslint": "^4.2.0",
-    "eslint-config-airbnb": "^15.0.2",
-    "eslint-plugin-import": "^2.6.1",
-    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-jest": "^20.0.3",
     "eslint-plugin-react": "^7.1.0",
     "jest": "^20.0.4",
-    "jest-cli": "^20.0.0",
     "jest-enzyme": "^3.4.0",
     "nsp": "^2.6.3",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-test-renderer": "^15.6.1"
+    "react-test-renderer": "^15.6.1",
+    "semistandard": "^11.0.0"
   },
   "repository": "https://github.com/nulogy/map-props-to-children",
   "license": "MIT",
+  "semistandard": {
+    "parser": "babel-eslint",
+    "plugins": [
+      "react",
+      "jest"
+    ],
+    "env": {
+      "jest/globals": true
+    }
+  },
   "scripts": {
-    "prepublish": "nsp check && babel lib --out-dir dist",
-    "pretest": "eslint ./ --fix --ignore-path .gitignore",
+    "prepublish": "nsp check && babel lib --out-dir dist --ignore test.js",
+    "pretest": "semistandard",
     "test": "jest"
   },
   "jest": {
