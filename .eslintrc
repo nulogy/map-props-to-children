@@ -1,3 +1,10 @@
 {
-  "extends": "airbnb"
+  "extends": "airbnb",
+  "env":{
+    "jest": true
+  },
+  "rules": {
+    "import/extensions": 0,
+    "quotes": ["error", "double"]
+  }
 }
