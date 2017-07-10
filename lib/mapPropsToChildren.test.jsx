@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import mapPropsToChildren from "../mapPropsToChildren";
+import mapPropsToChildren from "./lib";
 
 const injectedProps = {
   injected: true,
@@ -15,7 +15,7 @@ function Stub(props) {
   return (<div {...props}>{ Object.keys(props).join(", ") }</div>);
 }
 
-describe("mapPropsToChildren", () => {
+describe("#mapPropsToChildren", () => {
   test("injects props on one child", () => {
     const wrapper = shallow(
       <StubContainer>
@@ -23,7 +23,8 @@ describe("mapPropsToChildren", () => {
       </StubContainer>,
     );
 
-    const child = wrapper.find("Stub");
+    const child = wrapper.find(Stub);
+
     expect(child.props()).toEqual(injectedProps);
   });
 
@@ -37,6 +38,7 @@ describe("mapPropsToChildren", () => {
     );
 
     const children = wrapper.find(Stub);
+
     expect(children).toHaveLength(3);
     children.forEach((child) => {
       expect(child).toHaveProp("injected", true);
