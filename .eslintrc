@@ -1,0 +1,16 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "jest": true
+  },
+  "rules": {
+    "import/extensions": 0,
+    "quotes": [
+      "error",
+      "double"
+    ],
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": ["!**/*.test.(js,jsx)"]
+    }]
+  }
+}
