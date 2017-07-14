@@ -101,3 +101,17 @@ export default function Widget() {
   );
 }
 ```
+
+# License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for more details.
+
+# Acknowledgements
+
+This project was made possible through contributions from the following people:
+
+- [@arturopie](https://github.com/arturopie)
+- [@ecbrodie](https://github.com/ecbrodie)
+- [@JaKXz](https://github.com/JaKXz)
+- [@jerridan](https://github.com/jerridan)
+- [@theinterned](https://github.com/theinterned)
