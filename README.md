@@ -34,7 +34,7 @@ This library includes the following function:
 mapPropsToChildren({ children, injectedProps, props })
 ```
 
-Returns a list of the children components provided, but with new props injected into each child's props. Accepts the following input:
+Returns a list of the children components provided, but with new props injected into each child's props (shallow). The exported has a fixed arity of 1 that accepts the following properties on the argument object:
 
 - `children`: List of child components to clone and inject props into. Its existing props takes highest precedence
 - `injectedProps`: The props that will be injected into child components. It takes second-highest precedence
