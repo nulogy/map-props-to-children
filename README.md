@@ -49,8 +49,8 @@ export default function StockTicker({ stocks }) {
   return (
     <div>
       <h2>Stock Ticker</h2>
-      {stocks.map(stock => (
-        <p><b>{stock.name}:</b> {stock.price}</p>
+      {stocks.map((stock, index) => (
+        <p key={index}><b>{stock.name}:</b> {stock.price}</p>
       )}
     </div>
   );
